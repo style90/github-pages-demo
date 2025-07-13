@@ -1,7 +1,7 @@
 name: Deploy React App
 permissions:
   contents: write
-  
+
 on: workflow_dispatch
 jobs:
     test:
@@ -16,7 +16,7 @@ jobs:
             - name: Install
               run: npm install
             - name: Deploy
-              uses: JamesIves/github-pages-deploy-action@4.1.1
+              uses: style90/github-pages-deploy-action@4.1.1
               with:
                 folder: build
                 branch: gh-pages

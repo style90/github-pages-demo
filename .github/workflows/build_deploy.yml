@@ -1,16 +1,8 @@
-name: Test React App
-on: 
-  pull_request:
-     types:
-       - opened
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-      - 'hotfix-*'
-      - 'feature/**'
-    paths-ignore:
-      - '.github/workflows/*'
+name: Deploy React App
+permissions:
+  contents: write
+  
+on: workflow_dispatch
 jobs:
     test:
         runs-on: ubuntu-latest

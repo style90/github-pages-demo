@@ -9,7 +9,18 @@ on:
 jobs:
     test:
       runs-on: ubuntu-latest
-    buld:
+      steps:
+          - name: Code
+            uses: actions/chechout@v3
+          - name: Install Node v18
+            uses: actions/setup-node@v3
+            with:
+              node-version: 18
+          - name: Install
+            run: npm install
+          - name: Test
+            run: npm run test
+    build:
         runs-on: ubuntu-latest
         steps:
             - name: Code
